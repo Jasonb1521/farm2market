@@ -1,0 +1,5 @@
+rootProject.name = 'farm2market'
+
+include 'core'
+include 'server'
+include 'admin'

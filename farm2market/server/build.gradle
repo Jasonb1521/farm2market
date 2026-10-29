@@ -1,0 +1,42 @@
+plugins {
+    id 'application'
+}
+
+application {
+    mainClass = 'com.farm2market.server.ServerMain'
+    applicationDefaultJvmArgs = []
+}
+
+run {
+    args '--seed'
+}
+
+dependencies {
+    implementation project(':core')
+
+    implementation 'mysql:mysql-connector-java:8.0.33'
+    implementation 'org.xerial:sqlite-jdbc:3.44.1.0'
+    implementation 'com.zaxxer:HikariCP:5.1.0'
+    implementation 'org.mindrot:jbcrypt:0.4'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.farm2market.server.ServerMain'
+    }
+}
+
+tasks.register('fatJar', Jar) {
+    archiveClassifier = 'all'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    manifest {
+        attributes 'Main-Class': 'com.farm2market.server.ServerMain'
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    with jar
+}

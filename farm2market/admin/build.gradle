@@ -1,0 +1,34 @@
+plugins {
+    id 'application'
+}
+
+application {
+    mainClass = 'com.farm2market.admin.AdminMain'
+}
+
+dependencies {
+    implementation project(':core')
+
+    implementation 'com.formdev:flatlaf:3.2.5'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.farm2market.admin.AdminMain'
+    }
+}
+
+tasks.register('fatJar', Jar) {
+    archiveClassifier = 'all'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    manifest {
+        attributes 'Main-Class': 'com.farm2market.admin.AdminMain'
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    with jar
+}

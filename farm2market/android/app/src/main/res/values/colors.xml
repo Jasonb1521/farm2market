@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fresh Harvest Theme - Light & Airy -->
+
+    <!-- Primary Colors - Sage Green -->
+    <color name="primary">#5B8C5A</color>
+    <color name="primary_dark">#3D6B3D</color>
+    <color name="primary_light">#7CAF7B</color>
+    <color name="primary_variant">#4A7A49</color>
+
+    <!-- Secondary/Accent Colors - Warm Apricot -->
+    <color name="secondary">#F4A259</color>
+    <color name="secondary_dark">#E08B3A</color>
+    <color name="secondary_light">#F7B97A</color>
+
+    <!-- Background Colors -->
+    <color name="background">#FEFAF6</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="cream">#FFF8F0</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#2D3436</color>
+    <color name="text_secondary">#636E72</color>
+    <color name="text_hint">#A0A8AB</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    <color name="text_on_secondary">#2D3436</color>
+
+    <!-- Status Colors -->
+    <color name="success">#5B8C5A</color>
+    <color name="warning">#F4A259</color>
+    <color name="error">#E25B4E</color>
+    <color name="info">#5B9BD5</color>
+
+    <!-- Order Status Colors - Harmonized with theme -->
+    <color name="status_pending">#F4A259</color>
+    <color name="status_accepted">#5B9BD5</color>
+    <color name="status_preparing">#9B7ED9</color>
+    <color name="status_ready">#4ABDAC</color>
+    <color name="status_delivering">#E08B3A</color>
+    <color name="status_completed">#5B8C5A</color>
+    <color name="status_rejected">#E25B4E</color>
+    <color name="status_cancelled">#A0A8AB</color>
+
+    <!-- Dividers and Borders -->
+    <color name="divider">#EBE6E0</color>
+    <color name="border">#D9D2CA</color>
+
+    <!-- Rating Stars -->
+    <color name="star_filled">#F4A259</color>
+    <color name="star_empty">#E0DCD6</color>
+
+    <!-- Ripple -->
+    <color name="ripple">#1A5B8C5A</color>
+
+    <!-- Category Colors -->
+    <color name="category_vegetables">#5B8C5A</color>
+    <color name="category_fruits">#E25B4E</color>
+    <color name="category_grains">#D4A574</color>
+    <color name="category_dairy">#F7F3EE</color>
+</resources>

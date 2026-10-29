@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Barn/Farm house shape -->
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M12,3L2,9V21H22V9L12,3ZM11,19H6V13H11V19ZM18,19H13V13H18V19ZM20,10.5L12,5.5L4,10.5V19H5V12H19V19H20V10.5Z"/>
+
+    <!-- Sun -->
+    <path
+        android:fillColor="#FF8F00"
+        android:pathData="M19,4A2,2 0 1,1 17,2A2,2 0 0,1 19,4Z"/>
+
+    <!-- Plant/Leaf -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M8.5,17C8.5,17 9,14 12,14C15,14 15.5,17 15.5,17"/>
+
+</vector>

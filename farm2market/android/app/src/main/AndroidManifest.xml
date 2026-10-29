@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <application
+        android:name=".Farm2MarketApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Farm2Market"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <!-- Splash / Entry -->
+        <activity
+            android:name=".ui.auth.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Farm2Market.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Auth -->
+        <activity android:name=".ui.auth.LoginActivity" android:exported="false" />
+        <activity android:name=".ui.auth.RegisterActivity" android:exported="false" />
+        <activity android:name=".ui.auth.RoleSelectionActivity" android:exported="false" />
+
+        <!-- Customer -->
+        <activity android:name=".ui.customer.CustomerHomeActivity" android:exported="false" />
+        <activity android:name=".ui.customer.SearchActivity" android:exported="false" />
+        <activity android:name=".ui.customer.ProductDetailActivity" android:exported="false" />
+        <activity android:name=".ui.customer.CartActivity" android:exported="false" />
+        <activity android:name=".ui.customer.CheckoutActivity" android:exported="false" />
+        <activity android:name=".ui.customer.OrderListActivity" android:exported="false" />
+        <activity android:name=".ui.customer.OrderDetailActivity" android:exported="false" />
+        <activity android:name=".ui.customer.ReviewActivity" android:exported="false" />
+
+        <!-- Farmer -->
+        <activity android:name=".ui.farmer.FarmerDashboardActivity" android:exported="false" />
+        <activity android:name=".ui.farmer.ManageListingsActivity" android:exported="false" />
+        <activity android:name=".ui.farmer.AddEditProductActivity" android:exported="false" />
+        <activity android:name=".ui.farmer.IncomingOrdersActivity" android:exported="false" />
+        <activity android:name=".ui.farmer.OrderFulfilmentActivity" android:exported="false" />
+        <activity android:name=".ui.farmer.SalesSummaryActivity" android:exported="false" />
+
+        <!-- Profile -->
+        <activity android:name=".ui.profile.ProfileActivity" android:exported="false" />
+        <activity android:name=".ui.profile.EditProfileActivity" android:exported="false" />
+        <activity android:name=".ui.profile.FarmerProfileActivity" android:exported="false" />
+
+        <!-- Common -->
+        <activity android:name=".ui.common.NotificationsActivity" android:exported="false" />
+        <activity android:name=".ui.common.HelpActivity" android:exported="false" />
+        <activity android:name=".ui.common.ReportActivity" android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>
